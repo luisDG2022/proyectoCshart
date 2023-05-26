@@ -1,0 +1,31 @@
+﻿<Window x:Class="proyectoCshartWPF.winLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyectoCshartWPF"
+        mc:Ignorable="d"
+        Title="winLogin" Height="420" Width="420">
+    <Grid>
+        <StackPanel>
+            
+            <Grid Height="50" Background="#009688">
+                <Label HorizontalAlignment="Center" Content="Bienvenido" FontSize="35" Foreground="#ff5722"/>
+            </Grid>
+            <StackPanel Orientation="Horizontal" Margin="30">
+                <Label Content="usuario" HorizontalAlignment="Center" Foreground="#009688" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="txtusuario" Width="240" Margin="20,0,0,0"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Content="contrasenia" HorizontalAlignment="Center" Foreground="#009688" FontSize="16" FontWeight="Bold"/>
+                <PasswordBox x:Name="txtcontrasenia" Width="240" Margin="10,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="30" HorizontalAlignment="Center">
+                <Button x:Name="btnIngresar" Margin="10 0 0 0" Width="120" Content="Ingresar" Background="#ff5722" Click="btnIngresar_Click"/>
+                <Button x:Name="btnSalir" Margin="10 0 0 0" Width="120" Content="Salir" Background="#ff5722"/>
+            </StackPanel>
+            <Label x:Name="lblmensaje" Content="Por seguridad no revele el Password" HorizontalAlignment="Center" Foreground="#009688"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="proyectoCshartWPF.winAdmCategoria"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:proyectoCshartWPF"
+        mc:Ignorable="d"
+        Title="winAdmCategoria" Height="480" Width="540">
+    <Grid>
+        <StackPanel>
+            <Grid Height="30" Background="#009688">
+                <Button x:Name="btClose" Width="30" Background="Transparent" BorderBrush="Transparent" HorizontalAlignment="Left" Margin="770,0,0,0" Click="btClose_Click">
+                    <Label Content="X"/>
+                </Button>
+            </Grid>
+
+            <Label Content="Administracion de Categorias" HorizontalAlignment="Center" Foreground="#ff5722" FontSize="16" FontWeight="ExtraBold"/>
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Content="nombre" HorizontalAlignment="Center" Foreground="#009688" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="txtnombre" Width="240" Margin="10,0,0,0" IsEnabled="False"/> 
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10">
+                <Label Content="descripcion" HorizontalAlignment="Center" Foreground="#009688" FontSize="16" FontWeight="Bold"/>
+                <TextBox x:Name="txtdescripcion" Width="240" Margin="10,0,0,0" IsEnabled="False"/>
+            </StackPanel>
+
+            <DataGrid Height="220" Margin="10" x:Name="dtcategorias" CanUserAddRows="False" IsReadOnly="True" SelectionChanged="dtcategorias_SelectionChanged_1"/>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Insertar" x:Name="btnInsert" Width="95" Margin="5" Background="#ff5722" Click="btnInsert_Click"/>
+                <Button Content="Modificar" x:Name="btnUpdate" Width="95" Margin="5" Background="#ff5722" Click="btnUpdate_Click"/>
+                <Button Content="Eliminar" x:Name="btnDelete" Width="95" Margin="5" Background="#ff5722" Click="btnDelete_Click"/>
+                <Button Content="Guardar" x:Name="btnSave" Width="95" Margin="5" Background="#ff5722"  IsEnabled="False" Click="btnSave_Click"/>
+                <Button Content="Cancelar" x:Name="btnCancel" Width="95" Margin="5" Background="#ff5722" IsEnabled="False" Click="btnCancel_Click"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        
+
+    </Grid>
+</Window>
